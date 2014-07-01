@@ -16,6 +16,11 @@
 			<?php echo h($user['User']['password']); ?>
 			&nbsp;
 		</dd>
+			<dt><?php echo __('Token'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['token']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($user['User']['created']); ?>
@@ -38,7 +43,7 @@
 		<li><?php echo $this->Html->link(__('New Sleep'), array('controller' => 'sleeps', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Workouts'), array('controller' => 'workouts', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Sign in'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
+		
 	</ul>
 </div>
 <div class="related">

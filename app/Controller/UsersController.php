@@ -71,21 +71,39 @@ class UsersController extends AppController {
 			$login = $this->request->data['User']['login'];
 			$pass = Security::hash($this->request->data['User']['password']);
 			$lg = $this->User->findBylogin($login);
-			pr($lg);
 			if ($lg) {	
 				$this->Session->setFlash(__('Hello!'. $login));
 				return $this->redirect($this->referer());
 			}
 
-			
-			 else {
-				// $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+			else {
+				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
+		}	
 	}
-}
+
 	public function login() {
-		$this->__login();
+
+			$this->__login();
+
 	}
+
+	public function vklogin() {
+
+		if ($this->request->is('get')) {
+			$vkcode = $this->request->query['code'];
+			$this->redirect("https://oauth.vk.com/access_token?client_id=4438108&client_secret=F27VDncCkxpN5aAFWW8G&code={$vkcode}&redirect_uri=fit_day/users/vklogin");
+			
+		}		
+	}
+
+	// public function vkpostlogin() {
+	// 	var_dump($this->request->query);
+	// 	exit;
+	// } 
+
+
+
 	
 
 	
@@ -102,7 +120,13 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->User->save($this->request->data)) {
+			$this->request->data['User']['password'] = Security::hash($this->request->data['User']['password']);
+			$logincheck = $this->request->data['User']['login'];
+			if ($this->User->findBylogin($logincheck)) {
+				$this->Session->setFlash(('Sorry,but no!'));
+			}
+
+			elseif ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
