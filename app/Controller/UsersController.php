@@ -9,6 +9,9 @@ App::uses('Security', 'Utility');
  * @property nComponent $n
  * @property SessionComponent $Session
  */
+require_once ('/home/ivan/public_www/fit_day/app/Vendor/classes/VkPhpSdk.php');
+require_once ('/home/ivan/public_www/fit_day/app/Vendor/classes/Oauth2Proxy.php');
+
 class UsersController extends AppController {
 
 /**
@@ -89,18 +92,50 @@ class UsersController extends AppController {
 	}
 
 	public function vklogin() {
+	$oauth2Proxy = new Oauth2Proxy(
+    '4438108', // client id
+    'F27VDncCkxpN5aAFWW8G', // client secret
+    'https://oauth.vk.com/access_token', // access token url
+    'https://oauth.vk.com/authorize', // dialog uri
+    'code', // response type
+    'http://fit_day.com/users/vklogin', // redirect url
+	'offline,notify,friends,photos,audio,video,wall' // scope
+);
 
-		if ($this->request->is('get')) {
-			$vkcode = $this->request->query['code'];
-			$this->redirect("https://oauth.vk.com/access_token?client_id=4438108&client_secret=F27VDncCkxpN5aAFWW8G&code={$vkcode}&redirect_uri=fit_day/users/vklogin");
-			
-		}		
-	}
+// Try to authorize client
+if($oauth2Proxy->authorize() === true)
+{
+	var_dump($oauth2Proxy->getAccessToken());exit;
+	// Init vk.com SDK
+	$vkPhpSdk = new VkPhpSdk();
+	$vkPhpSdk->setAccessToken($oauth2Proxy->getAccessToken());
+	$vkPhpSdk->setUserId($oauth2Proxy->getUserId());
 
-	// public function vkpostlogin() {
-	// 	var_dump($this->request->query);
-	// 	exit;
-	// } 
+	// API call - get profile
+	$result = $vkPhpSdk->api('getProfiles', array(
+		'uids' => $vkPhpSdk->getUserId(),
+		'fields' => 'uid, first_name, last_name, nickname, screen_name, photo_big',
+	));
+	echo 'My profile: <br />';
+	echo '<pre>';
+	print_r($result);
+	echo '</pre>';
+	
+	// API call - wall post
+	$result = $vkPhpSdk->api('wall.post', array(
+		'owner_id' => $vkPhpSdk->getUserId(),
+		'message' => 'Wellcome to vkPhpSdk!',
+	));
+	echo 'Wall post response: <br />';
+	echo '<pre>';
+	print_r($result);
+	echo '</pre>';	
+}
+else {
+	
+	echo 'Error occurred';
+	
+		}}
 
 
 
