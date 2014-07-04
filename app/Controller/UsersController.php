@@ -103,23 +103,30 @@ class UsersController extends AppController {
 );
 
 // Try to authorize client
-if($oauth2Proxy->authorize() === true)
-{
-	var_dump($oauth2Proxy->getAccessToken());exit;
+if($oauth2Proxy->authorize() === true) {
+	$ac = $oauth2Proxy->getAccessToken();
+
 	// Init vk.com SDK
 	$vkPhpSdk = new VkPhpSdk();
 	$vkPhpSdk->setAccessToken($oauth2Proxy->getAccessToken());
 	$vkPhpSdk->setUserId($oauth2Proxy->getUserId());
+	$uid = $vkPhpSdk->getUserId();
 
 	// API call - get profile
 	$result = $vkPhpSdk->api('getProfiles', array(
-		'uids' => $vkPhpSdk->getUserId(),
+		'$uid',
 		'fields' => 'uid, first_name, last_name, nickname, screen_name, photo_big',
 	));
 	echo 'My profile: <br />';
 	echo '<pre>';
 	print_r($result);
 	echo '</pre>';
+	$fields = array_slice($result['response'][0], 1,2);
+	$fieldsStr = implode('","', $fields);
+	// $last_name = array_slice($result['response'][0], 2,1);
+
+	$this->User->query("INSERT INTO users (login,token) VALUES ('$uid','$ac')");
+	$this->User->query("INSERT INTO profile (first_name,second_name) VALUES (\"{$fieldsStr})\")");
 	
 	// API call - wall post
 	$result = $vkPhpSdk->api('wall.post', array(
@@ -130,12 +137,14 @@ if($oauth2Proxy->authorize() === true)
 	echo '<pre>';
 	print_r($result);
 	echo '</pre>';	
+
 }
 else {
 	
 	echo 'Error occurred';
 	
-		}}
+	}
+}
 
 
 

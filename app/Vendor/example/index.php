@@ -4,12 +4,12 @@ require_once dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'classes' . DIRE
 
 // Init OAuth 2.0 proxy
 $oauth2Proxy = new Oauth2Proxy(
-    '4438108', // client id
-    'F27VDncCkxpN5aAFWW8G', // client secret
+    '2623235', // client id
+    'FtoFreQZeezym3DCviid', // client secret
     'https://oauth.vk.com/access_token', // access token url
     'https://oauth.vk.com/authorize', // dialog uri
     'code', // response type
-    'http://fit_day.com/users', // redirect url
+    'http://localhost/vkPhpSdk/example', // redirect url
 	'offline,notify,friends,photos,audio,video,wall' // scope
 );
 
