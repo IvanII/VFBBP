@@ -51,6 +51,7 @@ class SleepsController extends AppController {
 			$this->Sleep->create();
 			if ($this->Sleep->save($this->request->data)) {
 				return $this->flash(__('The sleep has been saved.'), array('action' => 'index'));
+
 			}
 		}
 		$users = $this->Sleep->User->find('list');
@@ -100,3 +101,5 @@ class SleepsController extends AppController {
 		}
 	}
 }
+
+	

@@ -1,22 +1,26 @@
-<div class="users index">
-	<h2><?php echo __('Users'); ?></h2>
+<div class="Profiles index">
+	<h2><?php echo __('Profile'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('login'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('first_name'); ?></th>
+			<th><?php echo $this->Paginator->sort('second_name'); ?></th>
+			<th><?php echo $this->Paginator->sort('b_date'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php foreach ($users as $user): ?>
+	<?php foreach ($Profiles as $Profile): ?>
 	<tr>
-		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['login']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
-		</td>
+		<td><?php echo h($Profile['Profile']['id']); ?>&nbsp;</td>
+		<td><?php echo h($Profile['Profile']['user_id']); ?>&nbsp;</td>
+		<td><?php echo h($Profile['Profile']['first_name']); ?>&nbsp;</td>
+		<td><?php echo h($Profile['Profile']['second_name']); ?>&nbsp;</td>
+		<td><?php echo h($Profile['Profile']['b_date']); ?>&nbsp;</td>
+		 <td class="actions">
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $Profile['Profile']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $Profile['Profile']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $Profile['Profile']['id']), array(), __('Are you sure you want to delete # %s?', $Profile['Profile']['id'])); ?>
+		</td> 
 	</tr>
 <?php endforeach; ?>
 	</table>
@@ -37,7 +41,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Sign in'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Sign in'), array('controller' => 'users','action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Log in'), array('action' => 'login')); ?></li>
 		<li><?php echo $this->Html->link(__('VK Log in'), array('controller' => 'users','action' => 'vklogin'));?></li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
@@ -50,7 +54,6 @@
 		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Menu'), array('controller' => 'menus', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Menu'), array('controller' => 'menus', 'action' => 'index')); ?> </li>
-		
 
 	</ul>
 </div>

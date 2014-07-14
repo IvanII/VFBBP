@@ -76,6 +76,7 @@ class UsersController extends AppController {
 			$lg = $this->User->findBylogin($login);
 			if ($lg) {	
 				$this->Session->setFlash(__('Hello!'. $login));
+				
 				return $this->redirect($this->referer());
 			}
 
@@ -88,8 +89,11 @@ class UsersController extends AppController {
 	public function login() {
 
 			$this->__login();
+			
 
 	}
+
+	
 
 	public function vklogin() {
 	$oauth2Proxy = new Oauth2Proxy(

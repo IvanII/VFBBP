@@ -1,24 +1,34 @@
-<div class="users index">
-	<h2><?php echo __('Users'); ?></h2>
+<div class="menus index">
+	<h2><?php echo __('Menus'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('login'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('date'); ?></th>
+			<th><?php echo $this->Paginator->sort('descript'); ?></th>
+			<th><?php echo $this->Paginator->sort('tot_prot'); ?></th>
+			<th><?php echo $this->Paginator->sort('tot_fat'); ?></th>
+			<th><?php echo $this->Paginator->sort('tot_carb'); ?></th>
+			<th><?php echo $this->Paginator->sort('calories'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php foreach ($users as $user): ?>
+	<?php foreach ($menus as $Menu): ?>
 	<tr>
-		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['login']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['id']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['date']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['descript']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['tot_prot']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['tot_fat']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['tot_carb']); ?>&nbsp;</td>
+		<td><?php echo h($Menu['Menu']['calories']); ?>&nbsp;</td>
+		
+
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $Menu['Menu']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $Menu['Menu']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $Menu['Menu']['id']), array(), __('Are you sure you want to delete # %s?', $Menu['Menu']['id'])); ?>
 		</td>
 	</tr>
-<?php endforeach; ?>
+	<?php endforeach; ?>
 	</table>
 	<p>
 	<?php
@@ -39,7 +49,8 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Sign in'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Log in'), array('action' => 'login')); ?></li>
-		<li><?php echo $this->Html->link(__('VK Log in'), array('controller' => 'users','action' => 'vklogin'));?></li>
+		<li><!-- <a href="http://oauth.vk.com/authorize?client_id=4438108&redirect_uri=fit_day.com/Menus/&scope=3&response_type=code" title="VK Log in">VK Log in</a> -->
+			<?php echo $this->Html->link(__('VK Log in'), array('controller' => 'Menus','action' => 'vklogin'));?></li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Diet'), array('controller' => 'diets', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
@@ -50,7 +61,6 @@
 		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Menu'), array('controller' => 'menus', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Menu'), array('controller' => 'menus', 'action' => 'index')); ?> </li>
-		
 
 	</ul>
 </div>
