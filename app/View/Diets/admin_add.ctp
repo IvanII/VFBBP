@@ -1,7 +1,7 @@
-div class="users form 2">
+<div class="users form">
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
-		<legend><?php echo __('Log in User'); ?></legend>
+		<legend><?php echo __('Admin Add User'); ?></legend>
 	<?php
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
@@ -22,7 +22,5 @@ div class="users form 2">
 		<li><?php echo $this->Html->link(__('New Sleep'), array('controller' => 'sleeps', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Workouts'), array('controller' => 'workouts', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Menu'), array('controller' => 'menus', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Menu'), array('controller' => 'menus', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

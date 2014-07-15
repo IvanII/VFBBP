@@ -46,12 +46,6 @@ class Diet extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'' => array(
-			'className' => '',
-			'foreignKey' => 'id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
+	
 	);
 }

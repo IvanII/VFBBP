@@ -1,10 +1,14 @@
-div class="users form 2">
-<?php echo $this->Form->create('User'); ?>
+<div class="diets form">
+<?php echo $this->Form->create('Diet'); ?>
 	<fieldset>
-		<legend><?php echo __('Log in User'); ?></legend>
+		<legend><?php echo __('Add Diet'); ?></legend>
 	<?php
-		echo $this->Form->input('login');
-		echo $this->Form->input('password');
+		echo $this->Form->input('id');
+		echo $this->Form->input('user_id');
+		echo $this->Form->input('menu_id');
+		echo $this->Form->input('COMMENT');
+		
+		
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -13,7 +17,7 @@ div class="users form 2">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'diets','action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Diet'), array('controller' => 'diets', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
@@ -22,7 +26,5 @@ div class="users form 2">
 		<li><?php echo $this->Html->link(__('New Sleep'), array('controller' => 'sleeps', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Workouts'), array('controller' => 'workouts', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Menu'), array('controller' => 'menus', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Menu'), array('controller' => 'menus', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
