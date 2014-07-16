@@ -1,45 +1,29 @@
-<div class="sleeps view">
-<h2><?php echo __('Sleep'); ?></h2>
+<div class="users view">
+<h2><?php echo __('User'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
-			<?php echo h($user['Sleep']['id']); ?>
+			<?php echo h($user['User']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('User_id'); ?></dt>
+		<dt><?php echo __('Login'); ?></dt>
 		<dd>
-			<?php echo h($user['Sleep']['user_id']); ?>
+			<?php echo h($user['User']['login']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Date'); ?></dt>
+		<dt><?php echo __('Password'); ?></dt>
 		<dd>
-			<?php echo h($Sleep['Sleep']['date']); ?>
+			<?php echo h($user['User']['password']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('fall_asleep'); ?></dt>
+		<dt><?php echo __('Token'); ?></dt>
 		<dd>
-			<?php echo h($Sleep['Sleep']['f_asleep']); ?>
+			<?php echo h($user['User']['token']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('awake'); ?></dt>
+		<dt><?php echo __('Created'); ?></dt>
 		<dd>
-			<?php echo h($Sleep['Sleep']['awake']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('day_sleep'); ?></dt>
-		<dd>
-			<?php echo h($Sleep['Sleep']['day_sleep']); ?>
-			&nbsp;
-		</dd>
-
-		<dt><?php echo __('total_sleep_time'); ?></dt>
-		<dd>
-			<?php echo h($Sleep['Sleep']['total_time']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Comment'); ?></dt>
-		<dd>
-			<?php echo h($Sleep['Sleep']['comment']); ?>
+			<?php echo h($user['User']['created']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -49,7 +33,7 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller'=>'users','action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Diet'), array('controller' => 'diets', 'action' => 'add')); ?> </li>
@@ -59,8 +43,6 @@
 		<li><?php echo $this->Html->link(__('New Sleep'), array('controller' => 'sleeps', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Workouts'), array('controller' => 'workouts', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Menu'), array('controller' => 'menus', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Menu'), array('controller' => 'menus', 'action' => 'index')); ?> </li>
 		
 	</ul>
 </div>
