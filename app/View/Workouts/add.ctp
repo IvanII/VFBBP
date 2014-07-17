@@ -1,15 +1,14 @@
-<div class="menus form">
-<?php echo $this->Form->create('Menu'); ?>
+<div class="workouts form">
+<?php echo $this->Form->create('Workout'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Menu'); ?></legend>
+		<legend><?php echo __('Add Workout'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('date');
-		echo $this->Form->input('descript');
-		echo $this->Form->input('tot_prot');
-		echo $this->Form->input('tot_fat');
-		echo $this->Form->input('tot_carb');
-		echo $this->Form->input('calories');
+		echo $this->Form->input('user_id');
+		echo $this->Form->input('day');
+		echo $this->Form->input('set_workout_id');
+		echo $this->Form->input('start_time');
+		echo $this->Form->input('end_time');
 		
 	?>
 	</fieldset>

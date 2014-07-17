@@ -16,8 +16,10 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'diets','action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Sign in'), array('controller' => 'users','action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Log in'), array('controller' => 'users','action' => 'login')); ?></li>
+		<li><?php echo $this->Html->link(__('VK Log in'), array('controller' => 'users','action' => 'vklogin'));?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users','action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Diet'), array('controller' => 'diets', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>

@@ -1,6 +1,7 @@
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
+	
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('login'); ?></th>
@@ -37,7 +38,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Sign in'), array('action' => 'add')); ?></li>
+		<li class="btn btn-default btn-block"><?php echo $this->Html->link(__('Sign in'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Log in'), array('action' => 'login')); ?></li>
 		<li><?php echo $this->Html->link(__('VK Log in'), array('controller' => 'users','action' => 'vklogin'));?></li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
