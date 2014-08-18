@@ -81,7 +81,7 @@ class UsersController extends AppController {
 			}
 
 			else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The user could not be found. Please, try again.'));
 			}
 		}	
 	}

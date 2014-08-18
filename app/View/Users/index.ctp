@@ -1,7 +1,8 @@
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	
+	<!-- <table cellpadding="0" cellspacing="0"> -->
+	<div  class="table-responsive">
+	<table class="table table-striped table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('login'); ?></th>
@@ -9,10 +10,12 @@
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($users as $user): ?>
+	
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['login']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
+
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
@@ -21,6 +24,7 @@
 	</tr>
 <?php endforeach; ?>
 	</table>
+	</div>
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
@@ -35,10 +39,10 @@
 	?>
 	</div>
 </div>
-<div class="actions">
+<div class="actions" class="container">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li class="btn btn-default btn-block"><?php echo $this->Html->link(__('Sign in'), array('action' => 'add')); ?></li>
+		<li><span class="glyphicon glyphicon-remove"></span><?php echo $this->Html->link(__('Sign in'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Log in'), array('action' => 'login')); ?></li>
 		<li><?php echo $this->Html->link(__('VK Log in'), array('controller' => 'users','action' => 'vklogin'));?></li>
 		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
@@ -55,3 +59,5 @@
 
 	</ul>
 </div>
+
+

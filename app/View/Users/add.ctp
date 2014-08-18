@@ -1,26 +1,28 @@
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
-	<fieldset>
-		<legend><?php echo __('Add User'); ?></legend>
-	<?php
+	<div class="page-menu">
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Contact</li>
+		</ul>	
+	</div>
+	
+	
+
+</div>
+<div class="adduser">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora at consequatur ducimus accusamus iste sequi aliquid temporibus, quis quaerat voluptatem ab, aperiam reprehenderit dignissimos quo nihil cupiditate suscipit eaque et.<a href="#openModal">Зарегистрируйтесь</a>.</p>
+	<div id="openModal" class="modalDialog">
+		<div class="registration">
+			 <a href="#close" title="Close" class="close">X</a>
+			<h2>Регистрация</h2>
+			<?php
 		echo $this->Form->input('login');
 		echo $this->Form->input('password');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Diets'), array('controller' => 'diets', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Diet'), array('controller' => 'diets', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Profile'), array('controller' => 'profiles', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Sleeps'), array('controller' => 'sleeps', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Sleep'), array('controller' => 'sleeps', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Workouts'), array('controller' => 'workouts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Workout'), array('controller' => 'workouts', 'action' => 'add')); ?> </li>
-	</ul>
+	        ?>
+	    <?php echo $this->Form->end(__('Submit')); ?>
+		</div>
+	</div>
+	
 </div>
