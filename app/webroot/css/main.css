@@ -13,32 +13,53 @@ text-align: center;
 width: 100%;
 }
 
+li:hover{
+background: #000000;
+}
+
+/*.page-menu ul li{
+margin-left: 30px;
+}*/
+
+
 .page-menu  ul li {
-word-spacing: 100px;
 list-style: none;
 float: left;
 display: block;
+margin-left: 30px;
 }
 
 ul{
-padding: 15px;
+padding-top: 15px;
 padding-left: 125px;
 }
 
-.input.text label {
-padding-left: 80px;
-
+.input.password input{
+margin-left: 30px;
+border-radius: 3px;
 }
+
+.input.password label {
+margin-left: 18px;
+} 
 
 .input.text input {
-margin-left: 54px;
+margin-left: 57px;
+border-radius: 3px;
 }
+
+.input.text label {
+margin-left: 18px;
+
+}
+
 .adduser {
 text-align: center;
 }
 
 body {
-	background: #eeeeee;
+background: #eeeeee;
+margin:0;
 }
 
 h1{
@@ -52,7 +73,7 @@ h1{
  right: 0;
  bottom: 0;
  left: 0;
- background: rgba(0,0,0,0.8);
+ background: rgba(0,0,0,0.6);
  z-index: 999999;
  -webkit-transition: opacity 400ms ease-in;
  -moz-transition: opacity 400ms ease-in;
@@ -72,9 +93,7 @@ h1{
  padding: 5px 20px 13px 20px;
  border-radius: 10px;
  background: #1A1E22;
-/* background: -moz-linear-gradient(#7E8791, #1A1E22);
- background: -webkit-linear-gradient(#7E8791, #1A1E22);
- background: -o-linear-gradient(#7E8791, #1A1E22);*/
+
 }
 
 .close {
@@ -97,3 +116,8 @@ h1{
 }
 
 .close:hover { background: #00d9ff; }
+
+.submit input {
+border-radius: 3px;
+}
+

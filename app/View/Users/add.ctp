@@ -2,7 +2,7 @@
 <?php echo $this->Form->create('User'); ?>
 	<div class="page-menu">
 		<ul>
-			<li>Home</li>
+			<li><a href="https://www.google.ru/" style="color:#b3b1b1">Home</a></li>
 			<li>About</li>
 			<li>Contact</li>
 		</ul>	
