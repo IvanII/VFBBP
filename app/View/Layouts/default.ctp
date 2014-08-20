@@ -38,6 +38,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
+	<div class="page-menu">
+		<ul>
+			<li><a class="homelnk" href="/users/add">Home</a></li>
+			<li>About</li>
+			<li>Contact</li>
+		</ul>	
+	</div>
 	<div id="container">
 		
 		<div id="content">

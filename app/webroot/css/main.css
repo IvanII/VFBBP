@@ -8,18 +8,21 @@ background: #1A1E22;
 color: #b3b1b1;
 border-radius: 4px;
 height: 50px;
-font-size: 1em;
+font-size: 15px;
 text-align: center;
 width: 100%;
 }
 
-li:hover{
-background: #000000;
+.homelnk:hover{
+color: #FFFFFF;
 }
 
-/*.page-menu ul li{
-margin-left: 30px;
-}*/
+
+
+.page-menu ul li:hover{
+color: #FFFFFF;
+}
+
 
 
 .page-menu  ul li {
@@ -29,9 +32,18 @@ display: block;
 margin-left: 30px;
 }
 
-ul{
+.page-menu ul{
 padding-top: 15px;
 padding-left: 125px;
+}
+
+.registration{
+color:#b3b1b1;
+font-size: 14px;
+}
+
+.submit{
+color: #1A1E22;
 }
 
 .input.password input{
@@ -55,6 +67,7 @@ margin-left: 18px;
 
 .adduser {
 text-align: center;
+font-size: 22px;
 }
 
 body {

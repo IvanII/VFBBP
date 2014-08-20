@@ -1,18 +1,12 @@
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
-	<div class="page-menu">
-		<ul>
-			<li><a href="https://www.google.ru/" style="color:#b3b1b1">Home</a></li>
-			<li>About</li>
-			<li>Contact</li>
-		</ul>	
-	</div>
+	
 	
 	
 
 </div>
 <div class="adduser">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora at consequatur ducimus accusamus iste sequi aliquid temporibus, quis quaerat voluptatem ab, aperiam reprehenderit dignissimos quo nihil cupiditate suscipit eaque et.<a href="#openModal">Зарегистрируйтесь</a>.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora at consequatur ducimus accusamus iste sequi aliquid temporibus, quis quaerat voluptatem ab, aperiam reprehenderit dignissimos quo nihil cupiditate suscipit eaque et.<a href="#openModal" style="color:#5c5959">Зарегистрируйтесь</a>.</p>
 	<div id="openModal" class="modalDialog">
 		<div class="registration">
 			 <a href="#close" title="Close" class="close">X</a>
