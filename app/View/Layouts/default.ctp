@@ -40,9 +40,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div class="page-menu">
 		<ul>
-			<li><a class="homelnk" href="/users/add">Home</a></li>
-			<li>About</li>
-			<li>Contact</li>
+			<li><a class="lnk" href="/users/login">Home</a></li>
+			<li><a class="lnk" href="/users/login">About</a></li>
+			<li><a class="lnk" href="/users/login">Contact</a></li>
 		</ul>	
 	</div>
 	<div id="container">

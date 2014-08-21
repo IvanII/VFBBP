@@ -13,17 +13,15 @@ text-align: center;
 width: 100%;
 }
 
-.homelnk:hover{
-color: #FFFFFF;
-}
-
-
-
 .page-menu ul li:hover{
 color: #FFFFFF;
 }
 
-
+.lnk:hover{
+color: #FFFFFF;
+text-decoration: none;
+cursor: pointer;
+}
 
 .page-menu  ul li {
 list-style: none;
@@ -37,9 +35,14 @@ padding-top: 15px;
 padding-left: 125px;
 }
 
-.registration{
+.autorization{
 color:#b3b1b1;
 font-size: 14px;
+}
+
+.registration h2{
+text-align: center;
+
 }
 
 .submit{
@@ -94,6 +97,7 @@ h1{
  display: none;
  pointer-events: none;
 }
+
 .modalDialog:target {
  display: block;
  pointer-events: auto;
@@ -106,7 +110,6 @@ h1{
  padding: 5px 20px 13px 20px;
  border-radius: 10px;
  background: #1A1E22;
-
 }
 
 .close {
