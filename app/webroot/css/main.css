@@ -2,6 +2,8 @@
 
 
 
+
+
 .page-menu  {
 margin: 0px;
 background: #1A1E22;
@@ -40,10 +42,34 @@ color:#b3b1b1;
 font-size: 14px;
 }
 
+.btn.btn-success.atrz  {
+margin-top: 50px;
+background-color: #1A1E22;
+border-color:#1A1E22;
+color: #b3b1b1;
+}
+
+.btn.btn-primary.rgst{
+width: 300px;
+display: block;
+position:relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+background-color: #428bca;
+height: 80px;
+}
+.btn.btn-primary.rgst:hover{
+width: 310px;
+height: 83px; 
+margin-top: 48px;
+}
+
 .registration h2{
 text-align: center;
-
 }
+
+
 
 .submit{
 color: #1A1E22;
@@ -71,6 +97,11 @@ margin-left: 18px;
 .adduser {
 text-align: center;
 font-size: 22px;
+color:#1dadf0;
+}
+
+.adduser p a{
+text-decoration: none;
 }
 
 body {
