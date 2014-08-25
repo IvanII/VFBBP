@@ -1,9 +1,15 @@
 @import "bootstrap.css" all;
 
 
+body {
+background: #eeeeee;
+margin:0;
+font-family: Times New
+}
 
-
-
+h1{
+font-size: 50px;
+}
 .page-menu  {
 margin: 0px;
 background: #1A1E22;
@@ -43,65 +49,66 @@ font-size: 14px;
 }
 
 .btn.btn-success.atrz  {
+width:125px;
 margin-top: 50px;
 background-color: #1A1E22;
 border-color:#1A1E22;
 color: #b3b1b1;
 }
+.btn.btn-success.atrz:hover  {
+background-color: #202529;
+
+}
 
 .btn.btn-primary.rgst{
+font-size: 26px;
 width: 300px;
+padding:15px 30px;
 display: block;
 position:relative;
 margin-left: auto;
 margin-right: auto;
 margin-top: 50px;
 background-color: #428bca;
-height: 80px;
 }
 .btn.btn-primary.rgst:hover{
-width: 310px;
-height: 83px; 
-margin-top: 48px;
+background-color: #3994e3;
 }
-
 .registration h2{
 text-align: center;
 }
-
-
-
+.reglink {
+width: 25px;
+}
 .submit{
 color: #1A1E22;
 }
-
 .input.password input{
 margin-left: 30px;
 border-radius: 3px;
 }
-
 .input.password label {
 margin-left: 18px;
 } 
-
 .input.text input {
 margin-left: 57px;
 border-radius: 3px;
 }
-
 .input.text label {
 margin-left: 18px;
-
 }
-
 .adduser {
-text-align: center;
+text-align: justify;
 font-size: 22px;
-color:#1dadf0;
+color:#0d0c0c;
+width:80%;
+margin:0 auto;
 }
 
 .adduser p a{
 text-decoration: none;
+margin:0 auto;
+display: block;
 }
 
 body {

@@ -14,7 +14,7 @@
 		echo $this->Form->input('password');
 	        ?>
 	    <?php echo $this->Form->end(__('Submit')); ?>
-	    <p><a href=""><img src="fit_day/webroot/img/vk.png"></a></p>
+	    <p>Регистрация с помощью VK<a href="/users/vklogin"><?php echo $this->Html->image('vk.png') ?></a></p>
 	</div>
 	
 
