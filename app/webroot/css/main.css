@@ -4,12 +4,12 @@
 body {
 background: #eeeeee;
 margin:0;
-font-family: Times New
 }
 
 h1{
 font-size: 50px;
 }
+
 .page-menu  {
 margin: 0px;
 background: #1A1E22;
@@ -44,6 +44,7 @@ padding-left: 125px;
 }
 
 .autorization{
+text-align: center;
 color:#b3b1b1;
 font-size: 14px;
 }
@@ -55,9 +56,9 @@ background-color: #1A1E22;
 border-color:#1A1E22;
 color: #b3b1b1;
 }
+
 .btn.btn-success.atrz:hover  {
 background-color: #202529;
-
 }
 
 .btn.btn-primary.rgst{
@@ -71,41 +72,91 @@ margin-right: auto;
 margin-top: 50px;
 background-color: #428bca;
 }
+
 .btn.btn-primary.rgst:hover{
 background-color: #3994e3;
 }
+
 .registration h2{
 text-align: center;
 }
+
+.registration {
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.signin {
+width:50%;
+}
+
+.signin .input.text input  {
+margin-left: 60px;
+}
+
+.signin .input.password input  {
+margin-left: 33px;
+}
+
+.signin .submit input{
+background-color: #428bca;
+border:none;
+color: #FFFFFF;
+}
+
+.signin .submit input:hover{
+background-color: #3994e3;
+}
+
 .reglink {
 width: 25px;
 }
+
 .submit{
 color: #1A1E22;
 }
-.input.password input{
+
+.autorization .submit input{
+margin-left: 13px;
+width:70px;
+background-color: #a6a7a8;
+color: #1A1E22;
+border-color: #2f6fa8;
+border:1px;
+}
+
+.autorization .submit input:hover{
+background-color: #c3c6c9;
+}
+
+.login .input.password input{
 margin-left: 30px;
 border-radius: 3px;
 }
-.input.password label {
+
+.login .input.password label {
 margin-left: 18px;
 } 
-.input.text input {
+
+.login .input.text input {
 margin-left: 57px;
 border-radius: 3px;
 }
-.input.text label {
+
+.login .input.text label {
 margin-left: 18px;
 }
-.adduser {
+
+.loginuser {
 text-align: justify;
 font-size: 22px;
-color:#0d0c0c;
+color:#5d5d5e;
 width:80%;
 margin:0 auto;
 }
 
-.adduser p a{
+.loginuser p a{
 text-decoration: none;
 margin:0 auto;
 display: block;
@@ -117,7 +168,7 @@ margin:0;
 }
 
 h1{
-	font-size: 50px;
+font-size: 50px;
 }
 
 .modalDialog {
@@ -146,8 +197,8 @@ h1{
  position: relative;
  margin: 10% auto;
  padding: 5px 20px 13px 20px;
- border-radius: 10px;
- background: #1A1E22;
+ border-radius: 5px;
+ background: #121314;
 }
 
 .close {
