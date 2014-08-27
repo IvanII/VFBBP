@@ -1,0 +1,49 @@
+@import "bootstrap.css" all;
+
+.signin .input.text input  {
+margin-left: 60px;
+}
+
+.signin .input.password input  {
+margin-left: 33px;
+}
+
+.signin .submit input{
+background-color: #428bca;
+border:none;
+color: #FFFFFF;
+}
+
+.signin .submit input:hover{
+background-color: #3994e3;
+}
+
+.submit{
+color: #1A1E22;
+}
+
+.autorization .submit input:hover{
+background-color: #c3c6c9;
+}
+
+.login .input.password input{
+margin-left: 30px;
+border-radius: 3px;
+}
+
+.login .input.password label {
+margin-left: 18px;
+} 
+
+.login .input.text input {
+margin-left: 57px;
+border-radius: 3px;
+}
+
+.login .input.text label {
+margin-left: 18px;
+}
+
+.submit input {
+border-radius: 3px;
+}

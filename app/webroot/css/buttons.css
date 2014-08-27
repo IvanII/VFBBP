@@ -1,0 +1,33 @@
+@import "bootstrap.css" all;
+
+
+.btn.btn-success.atrz  {
+display: block;
+width:125px;
+margin-top: 50px;
+background-color: #1A1E22;
+border-color:#1A1E22;
+color: #b3b1b1;
+margin-right: auto;
+margin-left: auto;
+}
+
+.btn.btn-success.atrz:hover  {
+background-color: #202529;
+}
+
+.btn.btn-primary.rgst{
+font-size: 26px;
+width: 300px;
+padding:15px 30px;
+display: block;
+position:relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+background-color: #428bca;
+}
+
+.btn.btn-primary.rgst:hover{
+background-color: #3994e3;
+}

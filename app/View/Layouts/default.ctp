@@ -22,6 +22,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
@@ -31,6 +32,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
         echo $this->Html->css('main');
         echo $this->Html->css('bootstrap');
+        echo $this->Html->css('page-menu');
+        echo $this->Html->css('buttons');
+        echo $this->Html->css('input');
+        echo $this->Html->css('modalwindow');
+
+        echo $this->Html->script('bootstrap');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
